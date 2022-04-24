@@ -1,28 +1,49 @@
-nav {
+/* nav {
     display: flex;
+    position: fixed;
+} */
+
+.navbar-brand {
     height: 100px;
-    width: 100%;
-    background-color: rgb(63, 46, 249);
+    width: 100px;
 }
 
-.head-tags {
-    display: flex;
-    justify-content: space-between;
+#navbarMenu {
+    font-size: 20px;
 }
 
-nav a {
+h1 {
+    font-size: 48px;
+}
+
+header {
     color: white;
-    text-decoration: none;
-    padding: 10px;
-    text-align: right;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    background-size: cover;
+    background-position: center;
+    background-color: #0084af;
 }
 
-.tag-items {
-    display: flex;
-    margin-left: auto;
+header h1 {
+    font-size: 4rem;
 }
 
-nav img {
-    width: 100%;
-    height: 100%;
+header h2 {
+    font-size: 1.5rem;
+}
+
+main h3 {
+    font-size: 60px;
+}
+
+main .row {
+    padding-top: 3rem;
+}
+
+footer {
+    background-color: black;
+    background-size: cover;
+    padding-left: 3rem;
+    color: white;
 }

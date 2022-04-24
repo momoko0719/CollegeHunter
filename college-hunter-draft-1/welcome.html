@@ -3,74 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="This project is a website called College Hunter that aims to help college applicants organize their application tasks and deadlines.">
     <meta name="authors" content="Xiaofu Li, Kunyang Li, Ella Tao, Axel Zhao">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <title>College Hunter</title>
 </head>
 
 <body>
-    <nav>
-        <div class="head-tags">
-            <div class="tag-items">
+    <!-- <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
                 <img src="img/logo.png" alt="Product logo">
             </div>
-            <div class="tag-items">
-                <a href="">Search</a>
-            </div>
-            <div class="tag-items">
-                <a href="">Saved List</a>
-            </div>
-            <div class="tag-items">
-                <a href="">Organizer</a>
-            </div>
+            <ul class="nav justigy-content-end">
+                <li>
+                    <a href="">Search</a>
+                </li>
+                <li>
+                    <a href="">Saved List</a>
+                </li>
+                <li>
+                    <a href="">Organizer</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex">
+        <a class="navbar-brand" href="#">
+            <!-- hahaha -->
+            <img src="img/logo.png" alt="Product logo" class="navbar-brand">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu" aria-controls="myNavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item">
+                    <a href="#" class="nav-link pr-3 text-white">Search</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link pr-3 text-white">Saved List</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link pr-3 text-white">Organizer</a>
+                </li>
+            </ul>
         </div>
     </nav>
+
     <header>
-        <div>
-            <h1>College Hunter</h1>
-            <h2>A searching and organizing platform for your U.S. college application materials.</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="title">
+                    <h1>College Hunter</h1>
+                </div>
+                <div class="col" id="subtitle">
+                    <h2>A searching and organizing platform for your U.S. college application materials.</h2>
+                </div>
+            </div>
+
         </div>
     </header>
+
     <main>
-        <div>
-            <h3>About Us</h3>
-        </div>
-        <div>
-            <div>
-                <h4>Xiaofu Li</h4>
-            </div>
-            <div>
-                <p>Description</p>
-            </div>
-        </div>
-        <div>
-            <div>
-                <h4>Kunyang Li</h4>
-            </div>
-            <div>
-                <p>Description</p>
-            </div>
-        </div>
-        <div>
-            <div>
-                <h4>Yifei Tao</h4>
-            </div>
-            <div>
-                <p>Description</p>
-            </div>
-        </div>
-        <div>
-            <div>
-                <h4>Hesong Zhao</h4>
-            </div>
-            <div>
-                <p>Description</p>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>About Us</h3>
+                </div>
+                <div class="col">
+                    <div>
+                        <div>
+                            <h4>Xiaofu Li</h4>
+                        </div>
+                        <div>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>Kunyang Li</h4>
+                        </div>
+                        <div>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>Yifei Tao</h4>
+                        </div>
+                        <div>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>Hesong Zhao</h4>
+                        </div>
+                        <div>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div>
+            <p>
+                Email: kunyal@uw.edu
+            </p>
+            <p>
+                Phone#: 206-724-8007
+            </p>
+            <p>
+                copyright
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
