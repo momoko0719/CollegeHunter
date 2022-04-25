@@ -2,6 +2,7 @@
     font-family: "Rubik";
 } */
 
+
 #navigator {
     background-color: hsl(129, 28%, 29%);
     box-shadow: 0px 1.5px 8px black;
@@ -39,23 +40,22 @@ main .row {
 
 header .col {
     padding-top: 5rem;
-    transform: rotate(-2deg);
+
 }
 
 
 /* 这里要解决自动换行的问题 */
 
-header {
+.welcome-header {
     color: white;
     padding: 10rem 5rem;
-    background-size: cover;
+    background-size: 100% 100%; 
     background-position: center;
     background-color: #0084af;
     background-image: url("../img/title-background.jpg");
-    height: fit-content;
+    height:fit-content;
     top: -5%;
     left: 0;
-    transform: rotate(2deg);
 }
 
 footer {
@@ -65,12 +65,11 @@ footer {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     color: white;
-    transform: rotate(-2deg);
 }
 
-footer div {
+/*footer div {
     transform: rotate(2deg);
-}
+}*/
 
 main h3 {
     font-size: 2rem;
@@ -90,4 +89,24 @@ main p {
 
 #right-content {
     padding-left: 10%;
+}
+
+.main-header {
+    background-image: none;
+    background-color: white;
+    color: black;
+    margin: 5pt;
+    margin-top: 150pt;
+    text-align: center;
+}
+
+.main-header h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.search-bar {
+    margin-left: 35pt;
+    margin-right: 35pt;
+    margin-top: 40pt;
 }
