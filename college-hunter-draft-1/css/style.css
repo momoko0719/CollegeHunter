@@ -19,12 +19,22 @@
     font-weight: 500;
 }
 
-#nav-title {
-    padding-left: 0;
-    padding-top: 20px;
+
+/* 解决标题有条件显示的问题 */
+
+
+/* #nav-title {
+    display: none;
     color: white;
-    font-size: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
 }
+
+@media (min-width=576px) {
+    #nav-title {
+        display: flex;
+    }
+} */
 
 h1 {
     font-size: 48px;
