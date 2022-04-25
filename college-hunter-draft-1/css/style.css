@@ -1,7 +1,11 @@
-/* nav {
-    display: flex;
-    position: fixed;
+/* body {
+    font-family: "Rubik";
 } */
+
+#navigator {
+    background-color: hsl(129, 28%, 29%);
+    box-shadow: 0px 1.5px 8px black;
+}
 
 .navbar-brand {
     height: 100px;
@@ -9,7 +13,10 @@
 }
 
 #navbarMenu {
-    font-size: 20px;
+    font-size: 18px;
+    letter-spacing: .7px;
+    /* text-transform: uppercase; */
+    font-weight: 500;
 }
 
 h1 {
@@ -18,18 +25,21 @@ h1 {
 
 header h1 {
     font-size: 4rem;
+    font-weight: bold;
 }
 
 header h2 {
     font-size: 1.5rem;
-}
-
-main h3 {
-    font-size: 60px;
+    font-weight: 300;
 }
 
 main .row {
     padding-top: 3rem;
+}
+
+header .col {
+    padding-top: 5rem;
+    transform: rotate(-2deg);
 }
 
 
@@ -37,26 +47,47 @@ main .row {
 
 header {
     color: white;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-    background-size: 100%;
+    padding: 10rem 5rem;
+    background-size: cover;
     background-position: center;
     background-color: #0084af;
+    background-image: url("../img/title-background.jpg");
+    height: fit-content;
+    top: -5%;
+    left: 0;
+    transform: rotate(2deg);
 }
 
 footer {
-    background-color: black;
+    background-color: rgb(31, 44, 87);
     background-size: cover;
     padding-left: 3rem;
-    padding-top: .5rem;
-    padding-bottom: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     color: white;
+    transform: rotate(-2deg);
 }
 
-main h4 {
+footer div {
+    transform: rotate(2deg);
+}
+
+main h3 {
     font-size: 2rem;
+    color: hsl(128, 63%, 26%);
+    font-weight: 750;
+    text-transform: uppercase;
 }
 
 main p {
     font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#left-content {
+    padding-right: 10%;
+}
+
+#right-content {
+    padding-left: 10%;
 }
