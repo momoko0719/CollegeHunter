@@ -127,3 +127,9 @@ main p {
     margin-top: 50pt;
     margin-bottom: 0;
 }
+
+/*new part*/
+.card-header {
+    font-size: 14pt;
+    font-weight: bold;
+}
