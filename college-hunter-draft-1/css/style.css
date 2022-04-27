@@ -133,3 +133,31 @@ main p {
     font-size: 14pt;
     font-weight: bold;
 }
+
+/* Axel Page*/
+.info-header {
+    margin: 5pt;
+    margin-top: 120pt;
+    text-align: center;
+}
+
+.info-header h2 {
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.info-header a {
+    color: black;
+}
+
+.info-header a:hover {
+    color: hsl(129, 28%, 29%);
+    text-decoration: none;
+    transition: .25s ease-out;
+}
+
+.info-main div img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
