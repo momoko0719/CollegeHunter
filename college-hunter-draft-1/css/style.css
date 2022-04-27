@@ -1,21 +1,19 @@
-/* body {
-    font-family: "Rubik";
-} */
-
-#navigator {
+nav {
     background-color: hsl(129, 28%, 29%);
     box-shadow: 0px 1.5px 8px black;
 }
 
-.navbar-brand {
+nav .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     height: 100px;
     width: 100px;
 }
 
-#navbarMenu {
+nav .collapse {
     font-size: 18px;
     letter-spacing: .7px;
-    /* text-transform: uppercase; */
     font-weight: 500;
 }
 
@@ -25,22 +23,12 @@ nav .navbar-nav {
     align-items: center;
 }
 
-
-/* 解决标题有条件显示的问题 */
-
-
-/* #nav-title {
-    display: none;
+.nav-title a {
+    display: flex;
     color: white;
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
-
-@media (min-width=576px) {
-    #nav-title {
-        display: flex;
-    }
-} */
 
 h1 {
     font-size: 48px;
@@ -65,16 +53,13 @@ header .col {
 }
 
 .material-symbols-outlined {
-    font-size: 200px !important;
+    font-size: 70px !important;
 }
-
-
-/* 这里要解决自动换行的问题 */
 
 .welcome-header {
     color: white;
     padding: 10rem 5rem;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-color: #0084af;
     background-image: url("../img/title-background.jpg");
@@ -92,11 +77,6 @@ footer {
     color: white;
 }
 
-
-/*footer div {
-    transform: rotate(2deg);
-}*/
-
 main h3 {
     font-size: 2rem;
     color: hsl(128, 63%, 26%);
@@ -109,12 +89,12 @@ main p {
     font-weight: 400;
 }
 
-#left-content {
-    padding-right: 10%;
+main .col:first-child {
+    padding-right: 8%;
 }
 
-#right-content {
-    padding-left: 10%;
+main .col:last-child {
+    padding-left: 8%;
 }
 
 .main-header {
@@ -138,13 +118,17 @@ main p {
     margin-bottom: 0;
 }
 
+
 /*new part*/
+
 .card-header {
     font-size: 14pt;
     font-weight: bold;
 }
 
+
 /* Axel Page*/
+
 .info-header {
     margin: 5pt;
     margin-top: 120pt;
@@ -166,8 +150,14 @@ main p {
     transition: .25s ease-out;
 }
 
-.info-main div img{
+.info-main div img {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+
+@media (max-width=576px) {
+    .nav-title {
+        display: none;
+    }
 }
