@@ -70,7 +70,8 @@ header .col {
     height: fit-content;
     top: -5%;
     left: 0;
-    /* transform: rotate(-1.5deg); */
+    transform: rotate(-1.5deg);
+    /* width: 110%; */
 }
 
 
@@ -174,7 +175,7 @@ main .col:last-child {
     width: 100%;
 }
 
-@media (max-width=576px) {
+@media (max-width: 576px) {
     .nav-title {
         display: none;
     }
