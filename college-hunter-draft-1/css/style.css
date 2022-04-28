@@ -180,3 +180,14 @@ main .col:last-child {
         display: none;
     }
 }
+
+.organizer-header {
+    margin: 5pt;
+    margin-top: 120pt;
+    text-align: left;
+}
+
+.organizer-header h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
