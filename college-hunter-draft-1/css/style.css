@@ -174,7 +174,7 @@ main .col:last-child {
     width: 100%;
 }
 
-@media (max-width=576px) {
+@media (max-width:838px) {
     .nav-title {
         display: none;
     }
@@ -189,4 +189,9 @@ main .col:last-child {
 .organizer-header h2 {
     font-size: 2rem;
     font-weight: 400;
+}
+
+.nav-link dropdown {
+    font-size: 1.5rem !important;
+    color: white !important;
 }
