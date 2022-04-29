@@ -192,7 +192,7 @@ main .col:last-child {
     font-weight: 400;
 }
 
-.nav-link dropdown {
+.drop-list {
     font-size: 1.5rem !important;
     color: white !important;
 }
