@@ -196,3 +196,25 @@ main .col:last-child {
     font-size: 1.5rem !important;
     color: white !important;
 }
+
+.info-main {
+    margin-left: 50pt;
+    margin-right: 50pt;
+    margin-top: 20pt;
+}
+
+.info-header h2 {
+    font-size: 3rem;
+}
+
+@media (min-width: 1000px) {
+    .info-main {
+        margin-left: 150pt;
+        margin-right: 150pt;
+        margin-top: 20pt; 
+    }
+
+    .info-header h2 {
+        font-size: 5rem;
+    }
+}
