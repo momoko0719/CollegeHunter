@@ -189,6 +189,10 @@ main .col:last-child {
     justify-content: center;
 }
 
+.part-1 {
+    padding-bottom: 3rem;
+}
+
 .organizer-main .organizer-container {
     display: flex;
     justify-content: center;
