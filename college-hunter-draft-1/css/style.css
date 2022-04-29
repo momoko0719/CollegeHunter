@@ -101,7 +101,8 @@ main p {
     font-weight: 400;
 }
 
-main .col:first-child, main .col:last-child {
+main .col:first-child,
+main .col:last-child {
     padding-right: 8%;
     padding-left: 8%;
     padding-bottom: 4%;
@@ -172,13 +173,14 @@ main .col:first-child, main .col:last-child {
     }
 }
 
+
 /* Nora Page*/
+
 .top-header {
     display: flex;
     justify-content: center;
 }
 
-<<<<<<< HEAD
 .organizer-main .organizer-container {
     display: flex;
     justify-content: center;
@@ -205,7 +207,7 @@ main .col:first-child, main .col:last-child {
     display: flex;
     flex-direction: column;
 }
-=======
+
 .organizer-header h2 {
     font-size: 2rem;
     font-weight: 400;
@@ -236,4 +238,3 @@ main .col:first-child, main .col:last-child {
         font-size: 5rem;
     }
 }
->>>>>>> 3ab44394fdfc6b0f51fc1a37c678af417b68d224
