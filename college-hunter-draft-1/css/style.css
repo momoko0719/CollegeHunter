@@ -70,15 +70,7 @@ header .col {
     height: fit-content;
     top: -5%;
     left: 0;
-    /* transform: rotate(-1.5deg); */
-    /* width: 110%; */
 }
-
-
-/* .welcome-header h1,
-.welcome-header h2 {
-    transform: rotate(1.5deg);
-} */
 
 .welcome-header .col {
     text-align: center;
@@ -211,9 +203,8 @@ main .col:last-child {
     .info-main {
         margin-left: 150pt;
         margin-right: 150pt;
-        margin-top: 20pt; 
+        margin-top: 20pt;
     }
-
     .info-header h2 {
         font-size: 5rem;
     }
