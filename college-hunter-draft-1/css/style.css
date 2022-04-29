@@ -27,14 +27,22 @@ nav .navbar-nav {
     font-size: 1.5rem;
 }
 
-.nav-title a {
-    display: flex;
-    color: white;
+.nav-title {
+    font-family: 'Tapestry', cursive;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
+.nav-title .material-symbols-outlined {
+    font-size: 25px !important;
+}
+
+.nav-title a {
+    color: white;
+}
+
 h1 {
+    font-family: 'Tapestry', cursive;
     font-size: 48px;
 }
 
@@ -56,7 +64,7 @@ header .col {
     padding-top: 5rem;
 }
 
-.material-symbols-outlined {
+.navbar-item .material-symbols-outlined {
     font-size: 70px !important;
 }
 
