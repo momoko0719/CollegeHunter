@@ -1,0 +1,252 @@
+nav {
+    background-color: hsl(129, 28%, 29%);
+    box-shadow: 0px 1.5px 8px black;
+}
+
+nav .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+}
+
+nav .collapse {
+    font-size: 18px;
+    letter-spacing: .7px;
+    font-weight: 500;
+}
+
+nav .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-item a {
+    font-size: 1.5rem;
+}
+
+.nav-title {
+    font-family: 'Tapestry', cursive;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-title .material-symbols-outlined {
+    font-size: 25px !important;
+}
+
+.nav-title a {
+    color: white;
+}
+
+h1 {
+    font-family: 'Tapestry', cursive;
+    font-size: 48px;
+}
+
+header h1 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+header h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+main .row {
+    padding-top: 3rem;
+}
+
+header .col {
+    padding-top: 5rem;
+}
+
+.navbar-item .material-symbols-outlined {
+    font-size: 70px !important;
+}
+
+.welcome-header {
+    color: white;
+    padding: 10rem 5rem;
+    background-size: cover;
+    background-position: center;
+    background-color: #0084af;
+    background-image: url("../img/title-background.jpg");
+    height: fit-content;
+    top: -5%;
+    left: 0;
+}
+
+.welcome-header .col {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: rgb(31, 44, 87);
+    background-size: cover;
+    padding-left: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    color: white;
+}
+
+main h3 {
+    font-size: 2rem;
+    color: hsl(128, 63%, 26%);
+    font-weight: 750;
+    text-transform: uppercase;
+}
+
+main p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+main .col:first-child,
+main .col:last-child {
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-bottom: 4%;
+}
+
+.main-header {
+    background-image: none;
+    background-color: white;
+    color: black;
+    margin: 5pt;
+    margin-top: 150pt;
+    text-align: center;
+}
+
+.main-header h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.search-bar {
+    margin-left: 35pt;
+    margin-right: 35pt;
+    margin-top: 50pt;
+    margin-bottom: 0;
+}
+
+
+/*new part*/
+
+.card-header {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+
+/* Axel Page*/
+
+.info-header {
+    margin: 5pt;
+    margin-top: 120pt;
+    text-align: center;
+}
+
+.info-header h2 {
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.info-header a {
+    color: black;
+}
+
+.info-header a:hover {
+    color: hsl(129, 28%, 29%);
+    text-decoration: none;
+    transition: .25s ease-out;
+}
+
+.info-main div img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@media (max-width:838px) {
+    .nav-title {
+        display: none;
+    }
+}
+
+
+/* Nora Page*/
+
+.top-header {
+    display: flex;
+    justify-content: center;
+}
+
+.part-1 {
+    padding-bottom: 3rem;
+}
+
+.organizer-main .organizer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.organizer-main .card-body {
+    padding: 5% 5% 5% 5%;
+}
+
+.organizer-main .card {
+    width: auto;
+    height: fit-content;
+}
+
+.school-name {
+    color: green;
+}
+
+.organizer-main .card-title {
+    display: flex;
+}
+
+.organizer-main .card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.organizer-header h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.drop-list {
+    font-size: 1.5rem !important;
+    color: white !important;
+}
+
+.info-main {
+    margin-left: 50pt;
+    margin-right: 50pt;
+    margin-top: 20pt;
+}
+
+.info-header h2 {
+    font-size: 3rem;
+}
+
+@media (min-width: 1000px) {
+    .info-main {
+        margin-left: 150pt;
+        margin-right: 150pt;
+        margin-top: 20pt;
+    }
+    .info-header h2 {
+        font-size: 5rem;
+    }
+}

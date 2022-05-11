@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This page helps organize all application information of the colleges selected by the user.">
+    <meta name="authors" content="Xiaofu Li, Kunyang Li, Ella Tao, Axel Zhao">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c27fd3902c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Organizer - College Hunter</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark d-flex" id="navigator">
+        <a class="navbar-brand" href="welcome.html">
+            <img src="img/logo.png" alt="Product logo" class="navbar-brand">
+        </a>
+        <div class="nav-title">
+            <a href="welcome.html">COLLEGE<span class="material-symbols-outlined">
+                radar
+                </span>HUNTER
+            </a>
+        </div>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu" aria-controls="myNavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item">
+                    <a href="main.html" class="nav-link pr-3 text-white">Search</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="drop-list">
+                        <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">Saved List</a>
+                        <div class="dropdown-menu">
+                            <a href="info.html" class="dropdown-item">Harvard University</a>
+                            <a href="#" class="dropdown-item">Boston University</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <a href="organizer.html" class="nav-link pr-3 text-white">Organizer</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link pr-3 text-white">
+                        <span class="material-symbols-outlined">
+                            person_filled
+                            </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <h2>Manage Your Saved Schools</h2>
+    </header>
+
+    <main class="organizer-main">
+        <div class="card m-5">
+            <div class="card-body">
+                <div class="part-1">
+                    <div class="card-title">
+                        <h3>Application Deadlines</h3>
+                    </div>
+                    <div class="card-info">
+                        <p> <span class="date">Jan.1 </span> <span class="school-name">Harvard University</span> </p>
+                        <p> <span class="date">Jan.4 </span> <span class="school-name">Boston University</span> </p>
+                    </div>
+                </div>
+
+                <div class="part-2">
+                    <div class="card-title">
+                        <h3>Application Essay Questions</h3>
+                    </div>
+                    <div class="part">
+                        <p class="card-text"><span class="question">1. Common App Personal Essay <strong>[required] </strong></span><span class="school-name">Harvard University, Boston University</span></p>
+                        <p class="card-text">The essay demonstrates your ability to write clearly and concisely on a selected topic and helps you distinguish yourself in your own voice. What do you want the readers of your application to know about you apart from courses,
+                            grades, and test scores? Choose the option that best helps you answer that question and write an essay.</p>
+                        <p class="card-text">Maximum length: 650 words</p>
+                        <ul>
+                            <li><strong>Option1:</strong> Some students have a background, identity, interest, or talent that is so meaningful they believe their application would be incomplete without it. If this sounds like you, then please share your story.</li>
+                            <li><strong>Option2:</strong> The lessons we take from obstacles we encounter can be fundamental to later success. Recount a time when you faced a challenge, setback, or failure. How did it affect you, and what did you learn from
+                                the experience?
+                            </li>
+                            <li><strong>Option3:</strong> Reflect on a time when you questioned or challenged a belief or idea. What prompted your thinking? What was the outcome?</li>
+                            <li><strong>Option4:</strong> Reflect on something that someone has done for you that has made you happy or thankful in a surprising way. How has this gratitude affected or motivated you?</li>
+                            <li><strong>Option5:</strong> Discuss an accomplishment, event, or realization that sparked a period of personal growth and a new understanding of yourself or others.</li>
+                            <li><strong>Option6:</strong> Describe a topic, idea, or concept you find so engaging that it makes you lose all track of time. Why does it captivate you? What or who do you turn to when you want to learn more?</li>
+                            <li><strong>Option7:</strong> Share an essay on any topic of your choice. It can be one you‘ve already written, one that responds to a different prompt, or one of your own design.</li>
+                        </ul>
+                        <p class="card-text"><span class="question">2. Extracurricular Short Response <strong>[required] </strong></span><span class="school-name">Harvard University</span></p>
+                        <p class="card-text">Please briefly elaborate on one of your extracurricular activities or work experiences.</p>
+                        <p class="card-text">Maximum length: 150 words</p>
+                        <p class="card-text"><span class="question">3. Why This College Short Response <strong>[required] </strong></span><span class="school-name">Boston University</span></p>
+                        <p class="card-text">What about being a student at Boston University most excites you?</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <p>
+                Contact Info: INFO340 22SP Group 12
+            </p>
+            <p>
+                &copy; 2022 Xiaofu Li, Kunyang Li, Yifei Tao, Hesong Zhao. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

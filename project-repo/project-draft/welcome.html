@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This project is a website called College Hunter that aims to help college applicants organize their application tasks and deadlines.">
+    <meta name="authors" content="Xiaofu Li, Kunyang Li, Ella Tao, Axel Zhao">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c27fd3902c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>College Hunter</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark d-flex" id="navigator">
+        <a class="navbar-brand" href="welcome.html">
+            <img src="img/logo.png" alt="Product logo" class="navbar-brand">
+        </a>
+        <div class="nav-title">
+            <a href="welcome.html">COLLEGE<span class="material-symbols-outlined">
+                radar
+                </span>HUNTER
+            </a>
+        </div>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu" aria-controls="myNavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item">
+                    <a href="main.html" class="nav-link pr-3 text-white">Search</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="drop-list">
+                        <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">Saved List</a>
+                        <div class="dropdown-menu">
+                            <a href="info.html" class="dropdown-item">Harvard University</a>
+                            <a href="#" class="dropdown-item">Boston University</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <a href="organizer.html" class="nav-link pr-3 text-white">Organizer</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link pr-3 text-white">
+                        <span class="material-symbols-outlined">
+                            person_filled
+                            </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="welcome-header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>COLLEGE HUNTER</h1>
+                </div>
+                <div class="col">
+                    <h2>A searching and organizing platform for your U.S. college application materials.</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="welcome-main">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex flex-column col-md-6" id="left-content">
+                    <div class="content-title">
+                        <h3>A tool ease your college application process</h3>
+                    </div>
+                    <div class="content">
+                        <p>
+                            The U.S. college application process is a complex and troublesome one.Applicants must consider various factors when selecting a college of their choice. College Hunter is a platform that aims to help high school senior students who are in college application
+                            season looking to search college admission information and organize application documents.
+                        </p>
+                    </div>
+                </div>
+                <div class="col d-flex flex-column col-md-6" id="right-content">
+                    <div>
+                        <div>
+                            <h3>
+                                Search colleges based on your preference
+                            </h3>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Our platform provides a search engine for you to pick out the colleges you want to apply to based on school type, locations, scores, and rankings.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>Save the information of school you like</h3>
+                        </div>
+                        <div class="description">
+                            <p>
+                                You could add the school you want to apply to by logging in our platform for regular admission information checks.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>Organize the application materials for your saved school</h3>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Instead of checking application requirements on multiple school websites, our organizer collected all the application timeline and essay questions on one page.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>
+                Contact Info: INFO340 22SP Group 12
+            </p>
+            <p>
+                &copy; 2022 Xiaofu Li, Kunyang Li, Yifei Tao, Hesong Zhao. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
