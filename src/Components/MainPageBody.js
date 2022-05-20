@@ -83,7 +83,7 @@ function CollegeCard(props) {
     let schoolName = college.name;
     let schoolType = 'Type: ' + college.type;
     let schoolCity = college.city;
-    let schoolImage = '../img/' + college.img;
+    let schoolImage = '../img/college/' + college.img;
     let schoolRank = 'Ranking: ' + college.rank;
 
     return (
@@ -110,87 +110,27 @@ function CollegeCard(props) {
 
 
 function MainPageCardList(props) {
-    let collegesArray = props.colleges;
+    let colleges = props.colleges;
+    let cardsArray = colleges.map((college) => {
+        return <CollegeCard college={college} key={college.name} />
+    })
 
 
     return (
         <div className="card-groups m-5">
             <div className="row row-cols-1 row-cols-md-3 g-4">
-                <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
-                    <div className="card h-100 shadow-sm">
-                        <img src="img/college/uw.jpg" className="card-img-top" alt="University of Washington" />
-                        <div className="card-header">
-                            University of Washington <button className='btn btn-outline-success' type='submit'>
-                                <span class="material-symbols-outlined pt-1">add</span>
-                            </button>
-                        </div>
-                        <div className="card-body">
-                            <p className="card-text">Type: Public school</p>
-                            <p className="card-text">Ranking: 59</p>
-                            <p className="card-text"><i className='fas fa-map-marker-alt'></i> Seattle, WA</p>
-                            <a href="#" className="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
-                    <div className="card h-100 shadow-sm">
-                        <img src="img/college/university-wisconsin-madison.jpg" className="card-img-top" alt="university-wisconsin-madison" />
-
-                        <div className="card-header">
-                            University of Wisconsin-Madison <button className='btn btn-outline-success' type='submit'>
-                                <span class="material-symbols-outlined pt-1">add</span>
-                            </button>
-                        </div>
-                        <div className="card-body">
-                            <p className="card-text">Type: Public school</p>
-                            <p className="card-text">Ranking: 42</p>
-                            <p className="card-text"><i className='fas fa-map-marker-alt'></i> Madison, WI</p>
-                            <a href="#" className="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
-                    <div className="card h-100 shadow-sm">
-                        <img src="img/college/harvard.jpg" className="card-img-top" alt="harvard university" />
-                        <div className="card-header">
-                            Harvard University <button className='btn btn-outline-success' type='submit'>
-                                <span class="material-symbols-outlined pt-1">add</span>
-                            </button>
-                        </div>
-                        <div className="card-body">
-                            <p className="card-text">Type: Private school</p>
-                            <p className="card-text">Ranking: 1</p>
-                            <p className="card-text"><i className='fas fa-map-marker-alt'></i> Cambridge, MA</p>
-                            <a href="info.html" className="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
-                    <div className="card h-100 shadow-sm">
-                        <img src="img/college/bu.jpg" className="card-img-top" alt="Boston University" />
-                        <div className="card-header">
-                            Boston University <button className='btn btn-outline-success' type='submit'>
-                                <span class="material-symbols-outlined pt-1">add</span>
-                            </button>
-                        </div>
-                        <div className="card-body">
-                            <p className="card-text">Type: Private school</p>
-                            <p className="card-text">Ranking: 42</p>
-                            <p className="card-text"><i className='fas fa-map-marker-alt'></i> Boston, MA</p>
-                            <a href="#" className="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
+                {cardsArray}
             </div>
         </div>
     )
 }
 
-export default function MainPageBody() {
+export default function MainPageBody(props) {
+    let colleges = props.colleges;
     return (
         <div>
             <MainPageFilter />
-            <MainPageCardList />
+            <MainPageCardList colleges={colleges}/>
         </div>
     )
 }
