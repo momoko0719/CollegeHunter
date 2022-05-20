@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import WelcomePage from './WelcomePage';
 import MainPageBody from './MainPageBody';
-import NavBar from './NavBar';
+import NavBar from './Layout';
 import Organizer from './Organizer';
 
 function App() {

@@ -79,13 +79,20 @@ function MainPageFilter() {
 }
 
 function MainPageCardList() {
+    
+    
+    
     return (
         <div className="card-groups m-5">
         <div className="row row-cols-1 row-cols-md-3 g-4">
             <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
                 <div className="card h-100 shadow-sm">
                     <img src="img/college/uw.jpg" className="card-img-top" alt="University of Washington" />
-                    <div className="card-header">University of Washington</div>
+                    <div className="card-header">
+                        University of Washington <button className='btn btn-outline-success' type='submit'>
+                            <span class="material-symbols-outlined pt-1">add</span>
+                        </button>
+                    </div>
                     <div className="card-body">
                         <p className="card-text">Type: Public school</p>
                         <p className="card-text">Ranking: 59</p>
@@ -97,7 +104,12 @@ function MainPageCardList() {
             <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
                 <div className="card h-100 shadow-sm">
                     <img src="img/college/university-wisconsin-madison.jpg" className="card-img-top" alt="university-wisconsin-madison" />
-                    <div className="card-header">University of Wisconsin-Madison</div>
+                    
+                    <div className="card-header">
+                        University of Wisconsin-Madison <button className='btn btn-outline-success' type='submit'>
+                            <span class="material-symbols-outlined pt-1">add</span>
+                        </button>
+                    </div>
                     <div className="card-body">
                         <p className="card-text">Type: Public school</p>
                         <p className="card-text">Ranking: 42</p>
@@ -109,7 +121,11 @@ function MainPageCardList() {
             <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
                 <div className="card h-100 shadow-sm">
                     <img src="img/college/harvard.jpg" className="card-img-top" alt="harvard university" />
-                    <div className="card-header">Harvard University</div>
+                    <div className="card-header">
+                        Harvard University <button className='btn btn-outline-success' type='submit'>
+                            <span class="material-symbols-outlined pt-1">add</span>
+                        </button>
+                    </div>
                     <div className="card-body">
                         <p className="card-text">Type: Private school</p>
                         <p className="card-text">Ranking: 1</p>
@@ -121,7 +137,11 @@ function MainPageCardList() {
             <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
                 <div className="card h-100 shadow-sm">
                     <img src="img/college/bu.jpg" className="card-img-top" alt="Boston University" />
-                    <div className="card-header">Boston University</div>
+                    <div className="card-header">
+                        Boston University <button className='btn btn-outline-success' type='submit'>
+                            <span class="material-symbols-outlined pt-1">add</span>
+                        </button>
+                    </div>
                     <div className="card-body">
                         <p className="card-text">Type: Private school</p>
                         <p className="card-text">Ranking: 42</p>

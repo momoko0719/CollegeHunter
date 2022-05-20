@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <>
+        <div>
             <nav className="navbar fixed-top navbar-expand-sm navbar-dark d-flex" id="navigator">
                 <Link to="/" className="navbar-brand" href="welcome.html">
                     <img src="../img/logo.png" alt="Product logo" className="navbar-brand" />
@@ -57,7 +57,7 @@ const NavBar = () => {
                     </p>
                 </div>
             </footer>
-        </>
+        </div>
     )
 
 };
