@@ -6,6 +6,7 @@ import WelcomePage from './WelcomePage';
 import MainPageBody from './MainPageBody';
 import NavBar from './Layout';
 import Organizer from './Organizer';
+import InformationBody from './infoBody';
 
 function App(props) {
     let colleges = props.colleges;
@@ -15,6 +16,7 @@ function App(props) {
                     <Route index element={<WelcomePage />} />
                     <Route path="main" element={<MainPageBody colleges={colleges} />} />
                     <Route path="organizer" element={<Organizer />} />
+                    <Route path='info' element={<InformationBody />} />
                 </Route>
             </Routes>
     );
