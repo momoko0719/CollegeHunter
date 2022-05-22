@@ -1,11 +1,11 @@
 [
-    {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "img":"uw.jpg"},
-    {"name":"University of Wisconsin-Madison", "type":"Public School", "location":"The MIDWEST", "city":"Madison, WI", "rank":"42", "ddl":"Feb. 1", "sat":"1,260 ~ 1,460", "tuition":"$38,608", "img":"university-wisconsin-madison.jpg"},
-    {"name":"Harvard University", "type":"Private school", "location":"The NORTH-EAS", "city":"Cambridge, MA", "rank":"1", "ddl":"Jan. 1", "sat":"1,460 ~ 1,580", "tuition":"$55,587","img":"harvard.jpg"},
-    {"name":"Boston University", "type":"Private school", "location":"The NORTH-EAS", "city":"Boston, MA", "rank":"42", "ddl":"Jan. 4", "sat":"1,310 ~ 1,500", "tuition":"$59,816","img":"bu.jpg"},
-    {"name":"University of California--Los Angeles", "type":"Public school", "location":"The WEST", "city":"Los Angeles, CA", "rank":"14", "ddl":"Nov. 30", "sat":"1,300 ~ 1,530", "tuition":"$43,003","img":"bu.jpg"},
-    {"name":"University of California--Irvine", "type":"Public school", "location":"The WEST", "city":"Irvine, CA", "rank":"36", "ddl":"Nov. 30", "sat":"1,230 ~ 1,430", "tuition":"$43,507","img":"bu.jpg"},
-    {"name":"Emory University", "type":"Private school", "location":"The SOUTH", "city":"Atlanta, GA", "rank":"21", "ddl":"Jan. 1", "sat":"1,380 ~ 1,530", "tuition":"$53,868","img":"bu.jpg"},
-    {"name":"Stanford", "type":"Private school", "location":"The WEST", "city":"Stanford, CA", "rank":"6", "ddl":"Jan. 2", "sat":"1,420 ~ 1,570", "tuition":"$56,169","img":"bu.jpg"},
-    {"name":"Pennsylvania State University", "type":"Public school", "location":"The NORTH-EAS", "city":"University Park, PA", "rank":"63", "ddl":"rolling", "sat":"1,160 ~ 1,360", "tuition":"$35,514","img":"bu.jpg"}
+    {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "img":"uw.jpg","website":"https://www.washington.edu/"},
+    {"name":"University of Wisconsin-Madison", "type":"Public School", "location":"The MIDWEST", "city":"Madison, WI", "rank":"42", "ddl":"Feb. 1", "sat":"1,260 ~ 1,460", "tuition":"$38,608", "img":"university-wisconsin-madison.jpg","website":"https://www.wisc.edu/"},
+    {"name":"Harvard University", "type":"Private school", "location":"The NORTH-EAS", "city":"Cambridge, MA", "rank":"1", "ddl":"Jan. 1", "sat":"1,460 ~ 1,580", "tuition":"$55,587","img":"harvard.jpg","website": "https://www.harvard.edu/"},
+    {"name":"Boston University", "type":"Private school", "location":"The NORTH-EAS", "city":"Boston, MA", "rank":"42", "ddl":"Jan. 4", "sat":"1,310 ~ 1,500", "tuition":"$59,816","img":"bu.jpg","website":"https://www.bu.edu/"},
+    {"name":"University of California--Los Angeles", "type":"Public school", "location":"The WEST", "city":"Los Angeles, CA", "rank":"14", "ddl":"Nov. 30", "sat":"1,300 ~ 1,530", "tuition":"$43,003","img":"bu.jpg","website":"https://www.ucla.edu/"},
+    {"name":"University of California--Irvine", "type":"Public school", "location":"The WEST", "city":"Irvine, CA", "rank":"36", "ddl":"Nov. 30", "sat":"1,230 ~ 1,430", "tuition":"$43,507","img":"bu.jpg","website":"https://www.uci.edu/"},
+    {"name":"Emory University", "type":"Private school", "location":"The SOUTH", "city":"Atlanta, GA", "rank":"21", "ddl":"Jan. 1", "sat":"1,380 ~ 1,530", "tuition":"$53,868","img":"bu.jpg","website":"https://www.emory.edu/home/index.html"},
+    {"name":"Stanford", "type":"Private school", "location":"The WEST", "city":"Stanford, CA", "rank":"6", "ddl":"Jan. 2", "sat":"1,420 ~ 1,570", "tuition":"$56,169","img":"bu.jpg","website":"https://www.stanford.edu/"},
+    {"name":"Pennsylvania State University", "type":"Public school", "location":"The NORTH-EAS", "city":"University Park, PA", "rank":"63", "ddl":"rolling", "sat":"1,160 ~ 1,360", "tuition":"$35,514","img":"bu.jpg","website":"https://www.psu.edu/"}
 ]
