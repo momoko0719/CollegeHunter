@@ -4,16 +4,17 @@ import React from 'react';
 
 export default function InformationBody(props) {
     // replace test data with props later
+    let xxx = {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "img":"uw.jpg","website":"https://www.washington.edu/"}
     let TEST_DATA = { "name": "Harvard University", "type": "Private school", "location": "The NORTH-EAS", "city": "Cambridge, MA", "rank": "1", "ddl": "Jan. 1", "sat": "1,460 ~ 1,580", "tuition": "$55,587", "img": "harvard.jpg", "website": "https://www.harvard.edu/" }
     
-    let schoolName = TEST_DATA['name']
-    let schoolWebsite = TEST_DATA['website']
-    let schoolImg = '../img/college/' + TEST_DATA['img']
-    let schoolRank = '#' + TEST_DATA['rank']
-    let schoolCity = TEST_DATA['city']
-    let schoolDDL = TEST_DATA['ddl']
-    let schoolSAT = TEST_DATA['sat']
-    let schoolTuition = TEST_DATA['tuition']
+    let schoolName = xxx['name']
+    let schoolWebsite = xxx['website']
+    let schoolImg = '../img/college/' + xxx['img']
+    let schoolRank = '#' + xxx['rank']
+    let schoolCity = xxx['city']
+    let schoolDDL = xxx['ddl']
+    let schoolSAT = xxx['sat']
+    let schoolTuition = xxx['tuition']
 
     return (
         <div>
