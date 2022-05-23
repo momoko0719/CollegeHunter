@@ -3,10 +3,9 @@ import React from 'react';
 
 
 export default function InformationBody(props) {
-    // replace test data with props later
-    let xxx = {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "img":"uw.jpg","website":"https://www.washington.edu/"}
-    let TEST_DATA = { "name": "Harvard University", "type": "Private school", "location": "The NORTH-EAS", "city": "Cambridge, MA", "rank": "1", "ddl": "Jan. 1", "sat": "1,460 ~ 1,580", "tuition": "$55,587", "img": "harvard.jpg", "website": "https://www.harvard.edu/" }
-    
+    // some test data
+    let xxx = {"id":1, "name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "essayImg":"uwEssay.png","website":"https://www.washington.edu/", "img":"uw.jpg", "isCommon":false}
+
     let schoolName = xxx['name']
     let schoolWebsite = xxx['website']
     let schoolImg = '../img/college/' + xxx['img']
@@ -16,6 +15,8 @@ export default function InformationBody(props) {
     let schoolSAT = xxx['sat']
     let schoolTuition = xxx['tuition']
     let schoolType = xxx['type']
+    let schoolEssay = '../img//college' + xxx['essayImg']
+
 
     return (
         <div>
@@ -58,7 +59,7 @@ export default function InformationBody(props) {
 
                             <div className="col mb-2">
                                 <h2 className="card-title"><strong>Essay Questions</strong></h2>
-                                <p><em>Gotta have some essay pics later</em></p>
+                                <img src={schoolEssay} className="pb-3" alt={schoolName}/>
                             </div>
                         </div>
 
