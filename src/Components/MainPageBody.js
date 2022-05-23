@@ -7,20 +7,87 @@ function MainPageFilter(props) {
     let [isPublic, setIsPublic] = useState(false);
     let [isPrivate, setIsPrivate] = useState(false);
 
+    let [isWest, setIsWest] = useState(false);
+    let [isNE, setIsNE] = useState(false);
+    let [isMW, setIsMW] = useState(false);
+    let [isSouth, setIsSouth] = useState(false);
+
+    let [isT1, setIsT1] = useState(false);
+    let [isT2, setIsT2] = useState(false);
+    let [isT3, setIsT3] = useState(false);
+    let [isT4, setIsT4] = useState(false);
+
     let handlePub = (event) => {
         let pubCheck = event.target.checked;
         if (isPublic != pubCheck) {
             setIsPublic(pubCheck);
-            console.log("pub!");
+            // console.log("pub!");
         }
     }
     
     let handlePriv = (event) => {
         let privCheck = event.target.checked;
-        console.log([isPrivate, privCheck])
+        // console.log([isPrivate, privCheck])
         if (isPrivate != privCheck) {
             setIsPrivate(privCheck);
-            console.log("priv!");
+            // console.log("priv!");
+        }
+    }
+
+    let handleWest = (event) => {
+        let westCheck = event.target.checked;
+        if (isWest != westCheck) {
+            setIsWest(westCheck);
+        }
+    }
+
+    let handleNE = (event) => {
+        let neCheck = event.target.checked;
+        if (isNE != neCheck) {
+            setIsNE(neCheck);
+        }
+    }
+
+    let handleMW = (event) => {
+        let mwCheck = event.target.checked;
+        if (isMW != mwCheck) {
+            setIsMW(mwCheck);
+        }
+    }
+
+    let handleSouth = (event) => {
+        let southCheck = event.target.checked;
+        if (isSouth != southCheck) {
+            setIsSouth(southCheck);
+            // console.log("South!!!")
+        }
+    }
+
+    let handleT1 = (event) => {
+        let t1Check = event.target.checked;
+        if (isT1 != t1Check) {
+            setIsT1(t1Check);
+        }
+    }
+
+    let handleT2 = (event) => {
+        let t2Check = event.target.checked;
+        if (isT2 != t2Check) {
+            setIsT2(t2Check);
+        }
+    }
+
+    let handleT3 = (event) => {
+        let t3Check = event.target.checked;
+        if (isT3 != t3Check) {
+            setIsT3(t3Check);
+        }
+    }
+
+    let handleT4 = (event) => {
+        let t4Check = event.target.checked;
+        if (isT4 != t4Check) {
+            setIsT4(t4Check);
         }
     }
 
@@ -33,7 +100,7 @@ function MainPageFilter(props) {
                 <div className="input-group">
                     <input type="text" className="form-control" placeholder="Type full name of the college" aria-label="full name of college with two button addons" />
                     <button className="btn btn-primary" type="button">Search</button>
-                    <button className="btn btn-outline-secondary" type="submit" onClick={() => {props.applyTypeCallback(isPublic, isPrivate)}}>Filter</button>
+                    <button className="btn btn-outline-secondary" type="submit" onClick={() => {props.applyFilterCallback(isPublic, isPrivate, isWest, isNE, isMW, isSouth, isT1, isT2, isT3, isT4)}}>Filter</button>
                 </div>
             </div>
 
@@ -57,19 +124,19 @@ function MainPageFilter(props) {
                                 <label htmlFor="formOption2" className="form-label mt-3 font-weight-bold">College Location</label>
                                 <div id="formOption2">
                                     <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="checkbox" id="formInput1" value="option1" />
+                                        <input className="form-check-input" type="checkbox" id="formInput1" value="option2" checked={isWest} onChange={handleWest} />
                                         <label className="form-check-label" htmlFor="formInput1">The WEST</label>
                                     </div>
                                     <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" />
+                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" checked={isNE} onChange={handleNE} />
                                         <label className="form-check-label" htmlFor="formInput1">The NORTH-EAS</label>
                                     </div>
                                     <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" />
+                                        <input className="form-check-input" type="checkbox" id="formInput3" value="option2" checked={isMW} onChange={handleMW} />
                                         <label className="form-check-label" htmlFor="formInput1">The MIDWEST</label>
                                     </div>
                                     <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" />
+                                        <input className="form-check-input" type="checkbox" id="formInput4" value="option2" checked={isSouth} onChange={handleSouth} />
                                         <label className="form-check-label" htmlFor="formInput1">The SOUTH</label>
                                     </div>
                                 </div>
@@ -77,19 +144,19 @@ function MainPageFilter(props) {
                                 <label htmlFor="formOption3" className="form-label mt-3 font-weight-bold">College Ranking</label>
                                 <div id="formOption3">
                                     <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="checkbox" id="formInput1" value="option1" />
+                                        <input className="form-check-input" type="checkbox" id="formInput1" value="option1" checked={isT1} onChange={handleT1} />
                                         <label className="form-check-label" htmlFor="formInput1">1-15</label>
                                     </div>
                                     <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" />
+                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" checked={isT2} onChange={handleT2} />
                                         <label className="form-check-label" htmlFor="formInput1">15-30</label>
                                     </div>
                                     <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" />
+                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" checked={isT3} onChange={handleT3} />
                                         <label className="form-check-label" htmlFor="formInput1">31-50</label>
                                     </div>
                                     <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" />
+                                        <input className="form-check-input" type="checkbox" id="formInput2" value="option2" checked={isT4} onChange={handleT4} />
                                         <label className="form-check-label" htmlFor="formInput1">After 50</label>
                                     </div>
                                 </div>
@@ -110,6 +177,8 @@ function CollegeCard(props) {
     let schoolCity = college.city;
     let schoolImage = '../img/college/' + college.img;
     let schoolRank = 'Ranking: ' + college.rank;
+
+    // console.log(props.myKey)
 
     return (
         <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
@@ -136,9 +205,12 @@ function CollegeCard(props) {
 
 function MainPageCardList(props) {
     let colleges = props.colleges;
+    console.log(colleges)
     let cardsArray = colleges.map((college) => {
-        return <CollegeCard college={college} key={college.name} />
+        console.log(college.key)
+        return <CollegeCard myKey={college.key} college={college} />
     })
+
 
 
     return (
@@ -154,35 +226,102 @@ export default function MainPageBody(props) {
     let colleges = props.colleges;
 
     let [collegeType, setCollegeType] = useState({public: false, private: false});
-    // let [collegeLoc, setCollegeLoc] = useState({w: false, ne: false, mw: false, s: false});
-    // let [collegeRank, setCollegeRank] = useState({t1: false, t2: false, t3: false, t4: false});
+    let [collegeLoc, setCollegeLoc] = useState({w: false, ne: false, mw: false, s: false});
+    let [collegeRank, setCollegeRank] = useState({t1: false, t2: false, t3: false, t4: false});
 
-    let applyType = (pub, priv) => {
-        console.log([pub, priv]);
-        setCollegeType({public: pub, private: priv})
-        console.log(collegeType);
+    let applyFilter = (pub, priv, west, northeast, midwest, south, r1, r2, r3, r4) => {
+        setCollegeType({public: pub, private: priv});
+        setCollegeLoc({w: west, ne: northeast, mw: midwest, s: south});
+        setCollegeRank({t1: r1, t2: r2, t3: r3, t4: r4});
     }
-    // let applyLoc = () => {}
-    // let applyRank = () => {}
 
     let isPublic = collegeType.public;
     let isPrivate = collegeType.private;
 
+    let isWest = collegeLoc.w;
+    let isNE = collegeLoc.ne;
+    let isMW = collegeLoc.mw;
+    let isSouth = collegeLoc.s;
+
+    let isT1 = collegeRank.t1;
+    let isT2 = collegeRank.t2;
+    let isT3 = collegeRank.t3;
+    let isT4 = collegeRank.t4;
+
+    // First Row filter:
     if (isPublic == true && isPrivate == false) {
-        colleges = props.colleges.filter((college) => college.type == 'Public School');
-        console.log("select Public!")
+        colleges = colleges.filter((college) => college.type == 'Public School');
     } else if (isPublic == false && isPrivate == true) {
-        colleges = props.colleges.filter((college) => college.type == 'Private School');
-        console.log("select private!")
-    } else {
-        colleges = props.colleges;
+        colleges = colleges.filter((college) => college.type == 'Private School');
+    }
+
+    if (!(isWest == true && isNE == true && isMW == true && isSouth == true) && !(isWest == false && isNE == false && isMW == false && isSouth == false)) {
+        console.log("nmsl")
+        let collegesCopy = [];
+        if (collegeLoc.w == true) {
+            let addCollege = colleges.filter(college => college.location == "The WEST")
+            for (let college of addCollege) {
+                collegesCopy.push(college);
+            }
+        }
+        if (collegeLoc.ne == true) {
+            let addCollege = colleges.filter(college => college.location == "The NORTH-EAS")
+            for (let college of addCollege) {
+                collegesCopy.push(college);
+            }
+        }
+        if (collegeLoc.mw == true) {
+            let addCollege = colleges.filter(college => college.location == "The MIDWEST")
+            for (let college of addCollege) {
+                collegesCopy.push(college);
+            }
+        }
+        if (collegeLoc.s == true) {
+            let addCollege = colleges.filter(college => college.location == "The SOUTH")
+            console.log(addCollege);
+            for (let college of addCollege) {
+                collegesCopy.push(college);
+            }
+        }
+        colleges = collegesCopy;
+    }
+
+    if (!(isT1 == true && isT2 == true && isT3 == true && isT4 == true) && !(isT1 == false && isT2 == false && isT3 == false && isT4 == false)) {
+        console.log("qnmd");
+        let collegesCopy = [];
+        if (isT1 == true) {
+            let addCollege = colleges.filter(college => college.rank >= 1 && college.rank <= 15)
+            for (let college of addCollege) {
+                collegesCopy.push(college);
+            }
+        }
+        if (isT2 == true) {
+            let addCollege = colleges.filter(college => college.rank >= 16 && college.rank <= 30)
+            for (let college of addCollege) {
+                collegesCopy.push(college);
+            }
+        }
+        if (isT3 == true) {
+            let addCollege = colleges.filter(college => college.rank >= 31 && college.rank <= 50)
+            for (let college of addCollege) {
+                collegesCopy.push(college);
+            }
+        }
+        if (isT4 == true) {
+            let addCollege = colleges.filter(college => college.rank > 50)
+            console.log(addCollege);
+            for (let college of addCollege) {
+                collegesCopy.push(college);
+            }
+        }
+        colleges = collegesCopy;
     }
 
     console.log(colleges);
 
     return (
         <div>
-            <MainPageFilter applyTypeCallback={applyType} />
+            <MainPageFilter applyFilterCallback={applyFilter} />
             <MainPageCardList colleges={colleges}/>
         </div>
     )
