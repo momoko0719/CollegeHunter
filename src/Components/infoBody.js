@@ -1,14 +1,14 @@
 import React from 'react';
-
+import { useParams } from 'react-router-dom';
 
 
 export default function InformationBody(props) {
-    // replace test data with props later
-    let xxx = {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "img":"uw.jpg","website":"https://www.washington.edu/"}
-    let TEST_DATA = { "name": "Harvard University", "type": "Private school", "location": "The NORTH-EAS", "city": "Cambridge, MA", "rank": "1", "ddl": "Jan. 1", "sat": "1,460 ~ 1,580", "tuition": "$55,587", "img": "harvard.jpg", "website": "https://www.harvard.edu/" }
-    
+// <<<<<<< HEAD
+    // some test data
+    let xxx = {"id":1, "name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "essayImg":"uwEssay.png","website":"https://www.washington.edu/", "img":"uw.jpg", "isCommon":false}
+
     let schoolName = xxx['name']
-    let schoolWebsite = xxx['website']
+    let schoolWebsite  = xxx['website']
     let schoolImg = '../img/college/' + xxx['img']
     let schoolRank = '#' + xxx['rank']
     let schoolCity = xxx['city']
@@ -16,6 +16,26 @@ export default function InformationBody(props) {
     let schoolSAT = xxx['sat']
     let schoolTuition = xxx['tuition']
     let schoolType = xxx['type']
+    let schoolEssay = '../img//college' + xxx['essayImg']
+
+// =======
+//     // replace test data with props later
+//     // let urlParams = {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "img":"uw.jpg","website":"https://www.washington.edu/"}
+//     // let TEST_DATA = { "name": "Harvard University", "type": "Private school", "location": "The NORTH-EAS", "city": "Cambridge, MA", "rank": "1", "ddl": "Jan. 1", "sat": "1,460 ~ 1,580", "tuition": "$55,587", "img": "harvard.jpg", "website": "https://www.harvard.edu/" }
+    
+//     const urlParams = useParams();
+//     let colleges = props.colleges;
+
+//     let schoolName = urlParams['name']
+//     let schoolWebsite = urlParams['website']
+//     let schoolImg = '../img/college/' + urlParams['img']
+//     let schoolRank = '#' + urlParams['rank']
+//     let schoolCity = urlParams['city']
+//     let schoolDDL = urlParams['ddl']
+//     let schoolSAT = urlParams['sat']
+//     let schoolTuition = urlParams['tuition']
+//     let schoolType = urlParams['type']
+// >>>>>>> 34d2fd07c896e87ed35c7ab316ced10c2cb6a163
 
     return (
         <div>
@@ -58,7 +78,7 @@ export default function InformationBody(props) {
 
                             <div className="col mb-2">
                                 <h2 className="card-title"><strong>Essay Questions</strong></h2>
-                                <p><em>Gotta have some essay pics later</em></p>
+                                <img src={schoolEssay} className="pb-3" alt={schoolName}/>
                             </div>
                         </div>
 
