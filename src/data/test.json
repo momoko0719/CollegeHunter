@@ -1,6 +1,6 @@
 [
     {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA","rank":"59", "img":"uw.jpg"},
     {"name":"University of Wisconsin-Madison", "type":"Public School", "location":"The MIDWEST", "city":"Madison, WI", "rank":"42", "img":"university-wisconsin-madison.jpg"},
-    {"name":"Harvard University", "type":"Private school", "location":"The NORTH-EAS", "city":"Cambridge, MA", "rank":"1", "img":"harvard.jpg"},
-    {"name":"Boston University", "type":"Boston University", "location":"The NORTH-EAS", "city":"Boston, MA", "rank":"42", "img":"bu.jpg"}
+    {"name":"Harvard University", "type":"Private School", "location":"The NORTH-EAS", "city":"Cambridge, MA", "rank":"1", "img":"harvard.jpg"},
+    {"name":"Boston University", "type":"Private School", "location":"The NORTH-EAS", "city":"Boston, MA", "rank":"42", "img":"bu.jpg"}
 ]

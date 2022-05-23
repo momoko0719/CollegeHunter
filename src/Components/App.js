@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -10,6 +10,8 @@ import InformationBody from './infoBody';
 
 function App(props) {
     let colleges = props.colleges;
+
+    // let [filterCriteria, setFilterCriteria] = useState({collegeType: null, collegeLoc: {w: null, ne: null, mw: null, s: null}, collegeRank: {t1: null, t2: null, t3: null, t4: null}})
     return (
             <Routes>
                 <Route path="/" element={<NavBar />}>
