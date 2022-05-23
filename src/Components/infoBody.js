@@ -1,21 +1,24 @@
 import React from 'react';
-
+import { useParams } from 'react-router-dom';
 
 
 export default function InformationBody(props) {
     // replace test data with props later
-    let xxx = {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "img":"uw.jpg","website":"https://www.washington.edu/"}
-    let TEST_DATA = { "name": "Harvard University", "type": "Private school", "location": "The NORTH-EAS", "city": "Cambridge, MA", "rank": "1", "ddl": "Jan. 1", "sat": "1,460 ~ 1,580", "tuition": "$55,587", "img": "harvard.jpg", "website": "https://www.harvard.edu/" }
+    // let urlParams = {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "img":"uw.jpg","website":"https://www.washington.edu/"}
+    // let TEST_DATA = { "name": "Harvard University", "type": "Private school", "location": "The NORTH-EAS", "city": "Cambridge, MA", "rank": "1", "ddl": "Jan. 1", "sat": "1,460 ~ 1,580", "tuition": "$55,587", "img": "harvard.jpg", "website": "https://www.harvard.edu/" }
     
-    let schoolName = xxx['name']
-    let schoolWebsite = xxx['website']
-    let schoolImg = '../img/college/' + xxx['img']
-    let schoolRank = '#' + xxx['rank']
-    let schoolCity = xxx['city']
-    let schoolDDL = xxx['ddl']
-    let schoolSAT = xxx['sat']
-    let schoolTuition = xxx['tuition']
-    let schoolType = xxx['type']
+    const urlParams = useParams();
+    let colleges = props.colleges;
+
+    let schoolName = urlParams['name']
+    let schoolWebsite = urlParams['website']
+    let schoolImg = '../img/college/' + urlParams['img']
+    let schoolRank = '#' + urlParams['rank']
+    let schoolCity = urlParams['city']
+    let schoolDDL = urlParams['ddl']
+    let schoolSAT = urlParams['sat']
+    let schoolTuition = urlParams['tuition']
+    let schoolType = urlParams['type']
 
     return (
         <div>

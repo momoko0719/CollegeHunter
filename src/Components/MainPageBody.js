@@ -124,7 +124,7 @@ function CollegeCard(props) {
                     <p className="card-text">{schoolType}</p>
                     <p className="card-text">{schoolRank}</p>
                     <p className="card-text"><i className='fas fa-map-marker-alt'></i> {schoolCity}</p>
-                    <Link to="/info" className="btn btn-primary">Learn More</Link>
+                    <Link to={`/info/${schoolName}`} className="btn btn-primary">Learn More</Link>
                 </div>
             </div>
         </div>
