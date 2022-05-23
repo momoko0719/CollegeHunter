@@ -18,7 +18,7 @@ function App(props) {
                     <Route index element={<WelcomePage />} />
                     <Route path="main" element={<MainPageBody colleges={colleges} />} />
                     <Route path="organizer" element={<Organizer />} />
-                    <Route path='info' element={<InformationBody colleges={colleges}/>} />
+                    <Route path='info/:name' element={<InformationBody colleges={colleges}/>} />
                 </Route>
             </Routes>
     );
