@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function MainPageFilter(props) {
     
@@ -123,7 +124,7 @@ function CollegeCard(props) {
                     <p className="card-text">{schoolType}</p>
                     <p className="card-text">{schoolRank}</p>
                     <p className="card-text"><i className='fas fa-map-marker-alt'></i> {schoolCity}</p>
-                    <a href="#" className="btn btn-primary">Learn More</a>
+                    <Link to="/info" className="btn btn-primary">Learn More</Link>
                 </div>
             </div>
         </div>
