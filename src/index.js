@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './Components/App';
-import SAMPLE_SCHOOLS from './data/test.json'
+import SAMPLE_SCHOOLS from './data/data.json'
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
