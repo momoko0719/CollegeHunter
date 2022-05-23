@@ -15,6 +15,7 @@ export default function InformationBody(props) {
     let schoolDDL = xxx['ddl']
     let schoolSAT = xxx['sat']
     let schoolTuition = xxx['tuition']
+    let schoolType = xxx['type']
 
     return (
         <div>
@@ -46,6 +47,8 @@ export default function InformationBody(props) {
                                     <p className="card-text">{schoolSAT}</p>
                                 </div>
                                 <div className="col mb-2">
+                                    <h2 className="card-title"><strong>Type</strong></h2>
+                                    <p className="card-text">{schoolType}</p>
                                     <h2 className="card-title"><strong>Tuition/Year</strong></h2>
                                     <p className="card-text">{schoolTuition}</p>
                                 </div>
