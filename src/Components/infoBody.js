@@ -8,7 +8,7 @@ export default function InformationBody(props) {
     let xxx = {"id":1, "name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "essayImg":"uwEssay.png","website":"https://www.washington.edu/", "img":"uw.jpg", "isCommon":false}
 
     let schoolName = xxx['name']
-    let schoolWebsite = xxx['website']
+    let schoolWebsite  = xxx['website']
     let schoolImg = '../img/college/' + xxx['img']
     let schoolRank = '#' + xxx['rank']
     let schoolCity = xxx['city']
