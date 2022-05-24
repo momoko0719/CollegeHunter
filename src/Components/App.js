@@ -7,6 +7,7 @@ import MainPageBody from './MainPageBody';
 import NavBar from './Layout';
 import Organizer from './Organizer';
 import InformationBody from './infoBody';
+import Search from './Search';
 
 function App(props) {
     let colleges = props.colleges;
@@ -16,9 +17,11 @@ function App(props) {
             <Routes>
                 <Route path="/" element={<NavBar />}>
                     <Route index element={<WelcomePage />} />
-                    <Route path="main" element={<MainPageBody colleges={colleges} />} />
+                    <Route path="search" element={<Search />}>
+                        <Route path="search/:collegeName" element={<InformationBody />} />
+                        <Route index element={<MainPageBody colleges={colleges} />} />
+                    </Route>
                     <Route path="organizer" element={<Organizer />} />
-                    <Route path='info/:name' element={<InformationBody colleges={colleges}/>} />
                 </Route>
             </Routes>
     );

@@ -1,41 +1,27 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
+import SAMPLE_SCHOOLS from '../data/data.json'
+import _ from 'lodash';
 
 export default function InformationBody(props) {
-// <<<<<<< HEAD
-    // some test data
-    let xxx = {"id":1, "name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "essayImg":"uwEssay.png","website":"https://www.washington.edu/", "img":"uw.jpg", "isCommon":false}
+    const params = useParams();
+    let collegeNameString = params.collegeName;
 
-    let schoolName = xxx['name']
-    let schoolWebsite  = xxx['website']
-    let schoolImg = '../img/college/' + xxx['img']
-    let schoolRank = '#' + xxx['rank']
-    let schoolCity = xxx['city']
-    let schoolDDL = xxx['ddl']
-    let schoolSAT = xxx['sat']
-    let schoolTuition = xxx['tuition']
-    let schoolType = xxx['type']
-    let schoolEssay = '../img//college' + xxx['essayImg']
+    let college = _.find(SAMPLE_SCHOOLS, {name: collegeNameString});
+    if(!college) return <h2>No College specified</h2>;
 
-// =======
-//     // replace test data with props later
-//     // let urlParams = {"name":"University of Washington", "type":"Public School", "location":"The WEST", "city":"Seattle, WA", "rank":"59", "ddl":"Nov. 15", "sat":"1,200 ~ 1,470", "tuition":"$39,906", "img":"uw.jpg","website":"https://www.washington.edu/"}
-//     // let TEST_DATA = { "name": "Harvard University", "type": "Private school", "location": "The NORTH-EAS", "city": "Cambridge, MA", "rank": "1", "ddl": "Jan. 1", "sat": "1,460 ~ 1,580", "tuition": "$55,587", "img": "harvard.jpg", "website": "https://www.harvard.edu/" }
-    
-//     const urlParams = useParams();
-//     let colleges = props.colleges;
 
-//     let schoolName = urlParams['name']
-//     let schoolWebsite = urlParams['website']
-//     let schoolImg = '../img/college/' + urlParams['img']
-//     let schoolRank = '#' + urlParams['rank']
-//     let schoolCity = urlParams['city']
-//     let schoolDDL = urlParams['ddl']
-//     let schoolSAT = urlParams['sat']
-//     let schoolTuition = urlParams['tuition']
-//     let schoolType = urlParams['type']
-// >>>>>>> 34d2fd07c896e87ed35c7ab316ced10c2cb6a163
+    let schoolName = college['name'];
+    let schoolWebsite  = college['website'];
+    let schoolImg = '../public/img/college' + college['img'];
+    let schoolRank = '#' + college['rank'];
+    let schoolCity = college['city'];
+    let schoolDDL = college['ddl'];
+    let schoolSAT = college['sat'];
+    let schoolTuition = college['tuition'];
+    let schoolType = college['type'];
+    let schoolEssay = '../img//college' + college['essayImg'];
+
 
     return (
         <div>

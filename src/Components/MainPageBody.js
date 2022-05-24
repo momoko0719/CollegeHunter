@@ -93,9 +93,9 @@ function MainPageFilter(props) {
 
     return (
         <div>
-            <header className="main-header">
+            {/* <header className="main-header">
                 <h2>Come and hunt your target college!</h2>
-            </header>
+            </header> */}
             <div className="search-bar">
                 <div className="input-group">
                     <input type="text" className="form-control" placeholder="Type full name of the college" aria-label="full name of college with two button addons" />
@@ -193,7 +193,7 @@ function CollegeCard(props) {
                     <p className="card-text">{schoolType}</p>
                     <p className="card-text">{schoolRank}</p>
                     <p className="card-text"><i className='fas fa-map-marker-alt'></i> {schoolCity}</p>
-                    <Link to={`/info/${schoolName}`} className="btn btn-primary">Learn More</Link>
+                    <Link to={'search/' + schoolName} className="btn btn-primary">Learn More</Link>
                 </div>
             </div>
         </div>

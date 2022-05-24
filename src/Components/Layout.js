@@ -16,7 +16,7 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarMenu">
                     <ul className="navbar-nav ml-auto">
                         <li className="navbar-item">
-                            <Link to="/main" className="nav-link pr-3 text-white">Search</Link>
+                            <Link to="/search" className="nav-link pr-3 text-white">Search</Link>
                         </li>
                         <li className="nav-item dropdown">
                             <div className="drop-list">
