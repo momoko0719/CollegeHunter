@@ -13,14 +13,14 @@ export default function InformationBody(props) {
 
     let schoolName = college['name'];
     let schoolWebsite  = college['website'];
-    let schoolImg = '../public/img/college' + college['img'];
+    let schoolImg = '/img/college/' + college['img'];
     let schoolRank = '#' + college['rank'];
     let schoolCity = college['city'];
     let schoolDDL = college['ddl'];
     let schoolSAT = college['sat'];
     let schoolTuition = college['tuition'];
     let schoolType = college['type'];
-    let schoolEssay = '../img//college' + college['essayImg'];
+    let schoolEssay = '/img/college/' + college['essayImg'];
 
 
     return (

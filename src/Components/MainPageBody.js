@@ -175,7 +175,7 @@ function CollegeCard(props) {
     let schoolName = college.name;
     let schoolType = 'Type: ' + college.type;
     let schoolCity = college.city;
-    let schoolImage = '../img/college/' + college.img;
+    let schoolImage = '/img/college/' + college.img;
     let schoolRank = 'Ranking: ' + college.rank;
 
     // console.log(props.myKey)
