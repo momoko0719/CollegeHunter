@@ -20,7 +20,18 @@ export default function InformationBody(props) {
     let schoolSAT = college['sat'];
     let schoolTuition = college['tuition'];
     let schoolType = college['type'];
-    let schoolEssay = '/img/college/' + college['essayImg'];
+    // let schoolEssay = '/img/college/' + college['essayImg'];
+    let schoolEssay = null;
+    if (college['isCommon'] === false) {
+        schoolEssay = <img src={'/img/college/' + college['essayImg']} className="pb-3" alt={schoolName}/>
+    } else if (college['isCommon'] === true && college['essayImg'] === "") {
+        schoolEssay = <img src='/img/college/commonapp.png' className="pb-3" alt={schoolName}/>
+    } else {
+        schoolEssay = <div>
+            <img src='/img/college/commonapp.png' className="pb-3" alt={schoolName}/>
+            <img src={'/img/college/' + college['essayImg']} className="pb-3" alt={schoolName}/>
+        </div>
+    }
 
 
     return (
@@ -64,7 +75,8 @@ export default function InformationBody(props) {
 
                             <div className="col mb-2">
                                 <h2 className="card-title"><strong>Essay Questions</strong></h2>
-                                <img src={schoolEssay} className="pb-3" alt={schoolName}/>
+                                {schoolEssay}
+                                {/* <img src={schoolEssay} className="pb-3" alt={schoolName}/> */}
                             </div>
                         </div>
 
