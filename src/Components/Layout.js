@@ -52,7 +52,7 @@ const NavBar = () => {
                         Contact Info: INFO340 22SP Group 12
                     </p>
                     <p>
-                        &copy; 2022 Xiaofu Li, Kunyang Li, Yifei Tao, Hesong Zhao. All rights reserved.
+                        &copy; 2022 Xiaofu Li, Kunyang Li, Yifei Tao, Axel Zhao. All rights reserved.
                     </p>
                 </div>
             </footer>
