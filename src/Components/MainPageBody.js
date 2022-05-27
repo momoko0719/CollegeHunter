@@ -178,15 +178,30 @@ function CollegeCard(props) {
     let schoolImage = '/img/college/' + college.img;
     let schoolRank = 'Ranking: ' + college.rank;
 
-    // console.log(props.myKey)
+    let [isSaved, setIsSaved] = useState(false);
+    let [btnStyle, setBtnStyle] = useState(["success", "add"]);
+
+    let handleClick = (event) => {
+        if (!isSaved) {
+            setIsSaved(true);
+        } else {
+            setIsSaved(false);
+        }
+        if (btnStyle[0] == "success") {
+            setBtnStyle(["danger", "close"]);
+            props.addCallback(schoolName);
+        } else {
+            setBtnStyle(["success", "add"]);
+        }
+    }
 
     return (
         <div className="col-md-6 col-lg-6 col-xl-3 d-flex mb-4">
             <div className="card h-100 shadow-sm">
                 <img src={schoolImage} className="card-img-top" alt={schoolName} />
                 <div className="card-header">
-                    {schoolName} <button className='btn btn-outline-success' type='submit'>
-                        <span className="material-symbols-outlined pt-1">add</span>
+                    {schoolName} <button className={'btn btn-outline-' + btnStyle[0]} type='submit' onClick={handleClick}>
+                        <span className="material-symbols-outlined pt-1">{btnStyle[1]}</span>
                     </button>
                 </div>
                 <div className="card-body">
@@ -205,10 +220,10 @@ function CollegeCard(props) {
 
 function MainPageCardList(props) {
     let colleges = props.colleges;
-    console.log(colleges)
+    // console.log(colleges)
     let cardsArray = colleges.map((college) => {
-        console.log(college.key)
-        return <CollegeCard myKey={college.key} college={college} />
+        // console.log(college.key)
+        return <CollegeCard myKey={college.key} college={college} addCallback={props.addCallback} />
     })
 
 
@@ -322,7 +337,7 @@ export default function MainPageBody(props) {
     return (
         <div>
             <MainPageFilter applyFilterCallback={applyFilter} />
-            <MainPageCardList colleges={colleges}/>
+            <MainPageCardList colleges={colleges} addCallback={props.addCallback} />
         </div>
     )
 }

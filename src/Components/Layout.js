@@ -1,6 +1,16 @@
 import { Outlet, Link } from "react-router-dom";
+import React, { useState } from 'react';
+import _ from 'lodash';
 
-const NavBar = () => {
+const NavBar = (props) => {
+    console.log(props.colleges);
+
+    let savedList = props.colleges.map(college => {
+        return (
+            <Link to={"search/search/" + college.name} className="dropdown-item">{college.name}</Link>
+        )
+    })
+    
     return (
         <div>
             <nav className="navbar fixed-top navbar-expand-sm navbar-dark d-flex" id="navigator">
@@ -22,8 +32,9 @@ const NavBar = () => {
                             <div className="drop-list">
                                 <a href="#" className="nav-link dropdown-toggle text-white" data-toggle="dropdown">Saved List</a>
                                 <div className="dropdown-menu">
-                                    <a href="info.html" className="dropdown-item">Harvard University</a>
-                                    <a href="#" className="dropdown-item">Boston University</a>
+                                    {/* <a href="info.html" className="dropdown-item">Harvard University</a>
+                                    <a href="#" className="dropdown-item">Boston University</a> */}
+                                    {savedList}
                                 </div>
                             </div>
                         </li>

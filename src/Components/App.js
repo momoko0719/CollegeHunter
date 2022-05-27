@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import _ from 'lodash';
 
 import WelcomePage from './WelcomePage';
 import MainPageBody from './MainPageBody';
@@ -11,15 +13,27 @@ import Search from './Search';
 
 function App(props) {
     let colleges = props.colleges;
+    let [savedColleges, setSavedColleges] = useState([]);
 
-    // let [filterCriteria, setFilterCriteria] = useState({collegeType: null, collegeLoc: {w: null, ne: null, mw: null, s: null}, collegeRank: {t1: null, t2: null, t3: null, t4: null}})
+    function addToSavedList(name) {
+        let college = _.find(colleges, {name: name});
+        let copy = savedColleges;
+        console.log(college);
+        // savedColleges.push(college);
+        copy.push(college);
+        setSavedColleges(copy);
+        console.log(savedColleges);
+    }
+
+    console.log(savedColleges);
+
     return (
             <Routes>
-                <Route path="/" element={<NavBar />}>
+                <Route path="/" element={<NavBar colleges={savedColleges} />}>
                     <Route index element={<WelcomePage />} />
                     <Route path="search" element={<Search />}>
                         <Route path="search/:collegeName" element={<InformationBody />} />
-                        <Route index element={<MainPageBody colleges={colleges} />} />
+                        <Route index element={<MainPageBody colleges={colleges} addCallback={addToSavedList} />} />
                     </Route>
                     <Route path="organizer" element={<Organizer />} />
                 </Route>
