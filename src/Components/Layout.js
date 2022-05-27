@@ -5,7 +5,7 @@ const NavBar = () => {
         <div>
             <nav className="navbar fixed-top navbar-expand-sm navbar-dark d-flex" id="navigator">
                 <Link to="/" className="navbar-brand" href="welcome.html">
-                    <img src="../img/logo.png" alt="Product logo" className="navbar-brand" />
+                    <img src="/img/logo.png" alt="Product logo" className="navbar-brand" />
                 </Link>
                 <div className="nav-title">
                     <Link to="/">COLLEGE<span className="material-symbols-outlined">radar</span>HUNTER</Link>
