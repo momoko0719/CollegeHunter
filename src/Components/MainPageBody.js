@@ -17,6 +17,14 @@ function MainPageFilter(props) {
     let [isT3, setIsT3] = useState(false);
     let [isT4, setIsT4] = useState(false);
 
+    let [textInput, setTextInput] = useState("");
+
+    let inputHandler = (event) => {
+        let lowerCaseInput = event.target.value.toLowerCase();
+        setTextInput(lowerCaseInput);
+        // console.log(textInput);
+    }
+
     let handlePub = (event) => {
         let pubCheck = event.target.checked;
         if (isPublic != pubCheck) {
@@ -98,8 +106,8 @@ function MainPageFilter(props) {
             </header> */}
             <div className="search-bar">
                 <div className="input-group">
-                    <input type="text" className="form-control" placeholder="Type full name of the college" aria-label="full name of college with two button addons" />
-                    <button className="btn btn-primary" type="button">Search</button>
+                    <input type="text" className="form-control" placeholder="Type full name of the college" aria-label="full name of college with two button addons" onChange={inputHandler} />
+                    <button className="btn btn-primary" type="button" onClick={() => {props.applySearchCallback(textInput)}}>Search</button>
                     <button className="btn btn-outline-secondary" type="submit" onClick={() => {props.applyFilterCallback(isPublic, isPrivate, isWest, isNE, isMW, isSouth, isT1, isT2, isT3, isT4)}}>Filter</button>
                 </div>
             </div>
@@ -250,6 +258,26 @@ export default function MainPageBody(props) {
         setCollegeRank({t1: r1, t2: r2, t3: r3, t4: r4});
     }
 
+
+
+    let [textInput, setTextInput] = useState("");
+
+    let applySearch = (searchString) => {
+        setTextInput(searchString)
+    }
+
+    if(textInput == "") {
+        colleges = colleges;
+    } else {
+        colleges = colleges.filter((college) => college.name.toLowerCase().includes(textInput));
+    }
+
+    // let inputHandler = (event) => {
+    //     let lowerCaseInput = event.target.value.toLowerCase();
+    //     setTextInput(lowerCaseInput);
+    //     console.log(textInput);
+    // }
+
     let isPublic = collegeType.public;
     let isPrivate = collegeType.private;
 
@@ -336,7 +364,7 @@ export default function MainPageBody(props) {
 
     return (
         <div>
-            <MainPageFilter applyFilterCallback={applyFilter} />
+            <MainPageFilter applyFilterCallback={applyFilter} applySearchCallback={applySearch} />                                            
             <MainPageCardList colleges={colleges} addCallback={props.addCallback} />
         </div>
     )
