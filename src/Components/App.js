@@ -17,12 +17,21 @@ function App(props) {
 
     function addToSavedList(name) {
         let college = _.find(colleges, {name: name});
-        let copy = savedColleges;
+        let copy = [...savedColleges];
         console.log(college);
         // savedColleges.push(college);
-        copy.push(college);
-        setSavedColleges(copy);
+        if (!copy.includes(college)) {
+            copy.push(college);
+            setSavedColleges(copy);
+        }
         console.log(savedColleges);
+    }
+
+    function deleteFromSavedList(name) {
+        // let college = _.find(colleges, {name: name});
+        let copy = [...savedColleges];
+        copy = copy.filter(college => college.name != name);
+        setSavedColleges(copy);
     }
 
     console.log(savedColleges);
@@ -33,7 +42,7 @@ function App(props) {
                     <Route index element={<WelcomePage />} />
                     <Route path="search" element={<Search />}>
                         <Route path="search/:collegeName" element={<InformationBody />} />
-                        <Route index element={<MainPageBody colleges={colleges} addCallback={addToSavedList} />} />
+                        <Route index element={<MainPageBody colleges={colleges} addCallback={addToSavedList} deleteCallback={deleteFromSavedList} />} />
                     </Route>
                     <Route path="organizer" element={<Organizer />} />
                 </Route>

@@ -108,7 +108,7 @@ function MainPageFilter(props) {
                 <div className="input-group">
                     <input type="text" className="form-control" placeholder="Type full name of the college" aria-label="full name of college with two button addons" onChange={inputHandler} />
                     <button className="btn btn-primary" type="button" onClick={() => {props.applySearchCallback(textInput)}}>Search</button>
-                    <button className="btn btn-outline-secondary" type="submit" onClick={() => {props.applyFilterCallback(isPublic, isPrivate, isWest, isNE, isMW, isSouth, isT1, isT2, isT3, isT4)}}>Filter</button>
+                    <button className="btn btn-outline-secondary" type="submit" onClick={() => {props.applyFilterCallback(isPublic, isPrivate, isWest, isNE, isMW, isSouth, isT1, isT2, isT3, isT4)}}>Apply Filter</button>
                 </div>
             </div>
 
@@ -200,6 +200,7 @@ function CollegeCard(props) {
             props.addCallback(schoolName);
         } else {
             setBtnStyle(["success", "add"]);
+            props.deleteCallback(schoolName);
         }
     }
 
@@ -231,7 +232,7 @@ function MainPageCardList(props) {
     // console.log(colleges)
     let cardsArray = colleges.map((college) => {
         // console.log(college.key)
-        return <CollegeCard myKey={college.key} college={college} addCallback={props.addCallback} />
+        return <CollegeCard myKey={college.key} college={college} addCallback={props.addCallback} deleteCallback={props.deleteCallback} />
     })
 
 
@@ -266,11 +267,11 @@ export default function MainPageBody(props) {
         setTextInput(searchString)
     }
 
-    if(textInput == "") {
-        colleges = colleges;
-    } else {
-        colleges = colleges.filter((college) => college.name.toLowerCase().includes(textInput));
-    }
+    // if(textInput == "") {
+    //     colleges = colleges;
+    // } else {
+    //     colleges = colleges.filter((college) => college.name.toLowerCase().includes(textInput));
+    // }
 
     // let inputHandler = (event) => {
     //     let lowerCaseInput = event.target.value.toLowerCase();
@@ -290,6 +291,12 @@ export default function MainPageBody(props) {
     let isT2 = collegeRank.t2;
     let isT3 = collegeRank.t3;
     let isT4 = collegeRank.t4;
+
+    if(textInput == "") {
+        colleges = colleges;
+    } else {
+        colleges = colleges.filter((college) => college.name.toLowerCase().includes(textInput));
+    }
 
     // First Row filter:
     if (isPublic == true && isPrivate == false) {
@@ -365,7 +372,7 @@ export default function MainPageBody(props) {
     return (
         <div>
             <MainPageFilter applyFilterCallback={applyFilter} applySearchCallback={applySearch} />                                            
-            <MainPageCardList colleges={colleges} addCallback={props.addCallback} />
+            <MainPageCardList colleges={colleges} addCallback={props.addCallback} deleteCallback={props.deleteCallback} />
         </div>
     )
 }
