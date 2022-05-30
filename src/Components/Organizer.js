@@ -12,16 +12,16 @@ let college = [
 
 // ----------------------------------------------------------------------------
 let findDdl = college.map((eachSchool) => {
-  return <p> <span class="date">{eachSchool['ddl'] + ' '}</span> <span class="school-name">{eachSchool['name']}</span> </p>
+  return <p> <span className="date">{eachSchool['ddl'] + ' '}</span> <span className="school-name">{eachSchool['name']}</span> </p>
 })
 
 function AppDdl() {
   return (
-    <div class="part-1">
-      <div class="card-title">
+    <div className="part-1">
+      <div className="card-title">
         <h3>Application Deadlines</h3>
       </div>
-      <div class="card-info">
+      <div className="card-info">
         {findDdl}
       </div>
     </div>
@@ -49,9 +49,9 @@ let renderEsssay = college.map((eachSchool) => {
 
 function EssayQuestion() {
   return (
-    <div class="part-2">
+    <div className="part-2">
 
-      <div class="card-title">
+      <div className="card-title">
         <h3>Application Essay Questions</h3>
       </div>
 
@@ -67,13 +67,13 @@ function EssayQuestion() {
 export default function Organizer() {
   return (
     <div>
-      <header class="main-header">
+      <header className="main-header">
         <h2>Manage Your Saved Schools</h2>
       </header>
 
-      <main class="organizer-main">
-        <div class="card m-5">
-          <div class="card-body">
+      <main className="organizer-main">
+        <div className="card m-5">
+          <div className="card-body">
             <AppDdl />
             <EssayQuestion />
           </div>

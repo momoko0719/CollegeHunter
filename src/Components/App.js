@@ -42,7 +42,7 @@ function App(props) {
                     <Route index element={<WelcomePage />} />
                     <Route path="search" element={<Search />}>
                         <Route path="search/:collegeName" element={<InformationBody />} />
-                        <Route index element={<MainPageBody colleges={colleges} addCallback={addToSavedList} deleteCallback={deleteFromSavedList} />} />
+                        <Route index element={<MainPageBody colleges={colleges} addCallback={addToSavedList} deleteCallback={deleteFromSavedList}a />} />
                     </Route>
                     <Route path="organizer" element={<Organizer />} />
                 </Route>
