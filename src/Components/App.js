@@ -30,7 +30,7 @@ function App(props) {
     function deleteFromSavedList(name) {
         // let college = _.find(colleges, {name: name});
         let copy = [...savedColleges];
-        copy = copy.filter(college => college.name != name);
+        copy = copy.filter(college => college.name !== name);
         setSavedColleges(copy);
     }
 
@@ -44,7 +44,7 @@ function App(props) {
                         <Route path="search/:collegeName" element={<InformationBody />} />
                         <Route index element={<MainPageBody colleges={colleges} addCallback={addToSavedList} deleteCallback={deleteFromSavedList}a />} />
                     </Route>
-                    <Route path="organizer" element={<Organizer />} />
+                    <Route path="organizer" element={<Organizer colleges={savedColleges}/>} />
                 </Route>
             </Routes>
     );
