@@ -101,12 +101,12 @@ function MainPageFilter(props) {
 
     return (
         <div>
-            {/* <header className="main-header">
+            <header className="main-header">
                 <h2>Come and hunt your target college!</h2>
-            </header> */}
+            </header>
             <div className="search-bar">
                 <div className="input-group">
-                    <input type="text" className="form-control" placeholder="Type full name of the college" aria-label="full name of college with two button addons" onChange={inputHandler} />
+                    <input type="text" className="form-control" placeholder="Type to search your target college" aria-label="full name of college with two button addons" onChange={inputHandler} />
                     <button className="btn btn-primary" type="button" onClick={() => {props.applySearchCallback(textInput)}}>Search</button>
                     <button className="btn btn-outline-secondary" type="submit" onClick={() => {props.applyFilterCallback(isPublic, isPrivate, isWest, isNE, isMW, isSouth, isT1, isT2, isT3, isT4)}}>Apply Filter</button>
                 </div>
