@@ -18,23 +18,17 @@ function App(props) {
     function addToSavedList(name) {
         let college = _.find(colleges, {name: name});
         let copy = [...savedColleges];
-        console.log(college);
-        // savedColleges.push(college);
         if (!copy.includes(college)) {
             copy.push(college);
             setSavedColleges(copy);
         }
-        console.log(savedColleges);
     }
 
     function deleteFromSavedList(name) {
-        // let college = _.find(colleges, {name: name});
         let copy = [...savedColleges];
         copy = copy.filter(college => college.name !== name);
         setSavedColleges(copy);
     }
-
-    console.log(savedColleges);
 
     return (
             <Routes>
@@ -49,17 +43,5 @@ function App(props) {
             </Routes>
     );
 }
-
-
-// return (
-//     <div className='container'>
-//         <header>hahaha</header>
-//         <main>
-//             <MainPageBody />
-//         </main>
-//         <footer>hohoho</footer>
-//     </div>
-// )
-
 
 export default App;

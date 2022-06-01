@@ -95,6 +95,9 @@ footer {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     color: white;
+    /* position: sticky; */
+    width: 100%;
+    bottom: 0;
 }
 
 main h3 {

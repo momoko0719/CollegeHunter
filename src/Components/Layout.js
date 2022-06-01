@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import _ from 'lodash';
 
 const NavBar = (props) => {
-    console.log(props.colleges);
-
     let savedList = props.colleges.map(college => {
         return (
             <Link to={"search/search/" + college.name} className="dropdown-item">{college.name}</Link>

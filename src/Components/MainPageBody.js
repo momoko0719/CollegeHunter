@@ -267,18 +267,6 @@ export default function MainPageBody(props) {
         setTextInput(searchString)
     }
 
-    // if(textInput == "") {
-    //     colleges = colleges;
-    // } else {
-    //     colleges = colleges.filter((college) => college.name.toLowerCase().includes(textInput));
-    // }
-
-    // let inputHandler = (event) => {
-    //     let lowerCaseInput = event.target.value.toLowerCase();
-    //     setTextInput(lowerCaseInput);
-    //     console.log(textInput);
-    // }
-
     let isPublic = collegeType.public;
     let isPrivate = collegeType.private;
 
