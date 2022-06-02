@@ -235,15 +235,28 @@ function MainPageCardList(props) {
         return <CollegeCard myKey={college.key} college={college} addCallback={props.addCallback} deleteCallback={props.deleteCallback} />
     })
 
-
-
-    return (
-        <div className="card-groups m-5">
-            <div className="row row-cols-1 row-cols-md-3 g-4">
-                {cardsArray}
+    if(cardsArray == 0) {
+        return(
+            <h2 className='m-5'>No results found</h2>
+        )
+    } else {
+        return (
+            <div className="card-groups m-5">
+                <div className="row row-cols-1 row-cols-md-3 g-4">
+                    {cardsArray}
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
+
+
+    // return (
+    //     <div className="card-groups m-5">
+    //         <div className="row row-cols-1 row-cols-md-3 g-4">
+    //             {cardsArray}
+    //         </div>
+    //     </div>
+    // )
 }
 
 export default function MainPageBody(props) {
@@ -283,6 +296,7 @@ export default function MainPageBody(props) {
     if(textInput == "") {
         colleges = colleges;
     } else {
+
         colleges = colleges.filter((college) => college.name.toLowerCase().includes(textInput));
     }
 
