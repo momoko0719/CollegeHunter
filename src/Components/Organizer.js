@@ -27,7 +27,7 @@ export default function Organizer(props) {
   })
 
   let renderCommon = null
-  if (ifCommon.length > 0) {
+  if (ifCommon.includes(1)) {
     renderCommon = (
       <div>
         <p><strong>Common App Essay:</strong></p>
