@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin } from '@fortawesome/free-solid-svg-icons';
+import { faFaceFrown } from '@fortawesome/free-solid-svg-icons';
+
 
 function MainPageFilter(props) {
     
@@ -239,7 +241,7 @@ function MainPageCardList(props) {
 
     if(cardsArray == 0) {
         return(
-            <h2 className='m-5'>No results found</h2>
+            <h2 className='m-5'><FontAwesomeIcon icon={faFaceFrown} /> No results found</h2>
         )
     } else {
         return (
