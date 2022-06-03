@@ -1,5 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import _ from 'lodash';
 
 const NavBar = (props) => {
@@ -16,7 +18,7 @@ const NavBar = (props) => {
                     <img src="/img/logo.png" alt="Product logo" className="navbar-brand" />
                 </Link>
                 <div className="nav-title">
-                    <Link to="/">COLLEGE<span className="material-symbols-outlined">radar</span>HUNTER</Link>
+                    <Link className="nav-title-text" to="/">COLLEGE<span className="material-symbols-outlined">radar</span>HUNTER</Link>
                 </div>
                 <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu" aria-controls="myNavigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -41,9 +43,10 @@ const NavBar = (props) => {
                         </li>
                         <li className="navbar-item">
                             <a href="#" className="nav-link pr-3 text-white">
-                                <span className="material-symbols-outlined">
+                                {/* <span className="material-symbols-outlined">
                                     person_filled
-                                </span>
+                                </span> */}
+                                <FontAwesomeIcon icon={faUser} />
                             </a>
                         </li>
                     </ul>

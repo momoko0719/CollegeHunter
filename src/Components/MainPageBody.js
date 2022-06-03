@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapPin } from '@fortawesome/free-solid-svg-icons';
 
 function MainPageFilter(props) {
     
@@ -216,7 +218,7 @@ function CollegeCard(props) {
                 <div className="card-body">
                     <p className="card-text">{schoolType}</p>
                     <p className="card-text">{schoolRank}</p>
-                    <p className="card-text"><i className='fas fa-map-marker-alt'></i> {schoolCity}</p>
+                    <p className="card-text"><FontAwesomeIcon icon={faMapPin} /> {schoolCity}</p>
                     <Link to={'search/' + schoolName} className="btn btn-primary">Learn More</Link>
                 </div>
             </div>

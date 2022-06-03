@@ -31,6 +31,11 @@ nav .navbar-nav {
     font-family: 'Tapestry', cursive;
     font-size: 1.5rem;
     font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-title-text {
+    text-decoration: none;
 }
 
 .nav-title .material-symbols-outlined {
